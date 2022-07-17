@@ -6,7 +6,31 @@
         xmlns:local="clr-namespace:NumberAnimation"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid x:Name="MainGrid">
+        <Label x:Name="NumberDisplay" Content="Label" HorizontalAlignment="Left" Margin="20,104,0,0" VerticalAlignment="Top" Height="100" Width="380" FontFamily="D2Coding" FontStretch="Normal" FontSize="50" FontWeight="Normal" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+        <Button x:Name="SubtractFixedNumButton" Content="-100" Margin="493,174,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="35" Width="80" VerticalContentAlignment="Center" UseLayoutRounding="False" Click="SubtractFixedNumButton_Click"/>
+        <Button x:Name="SubtractFixedNumDigit" Content="Digit Number - 1" Margin="460,124,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="35" Width="135" VerticalContentAlignment="Center" UseLayoutRounding="False" Click="SubtractFixedNumDigit_Click"/>
+        <Button x:Name="AddFixedNumButton" Content="+100" Margin="652,174,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="35" Width="80" VerticalContentAlignment="Center" UseLayoutRounding="False" Click="AddFixedNumButton_Click"/>
+        <Button x:Name="AddFixedNumDigit" Content="Digit Number + 1" Margin="625,124,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="35" Width="135" VerticalContentAlignment="Center" UseLayoutRounding="False" Click="AddFixedNumDigit_Click"/>
+        <Button x:Name="ResetNumberButton" Content="Reset" Margin="225,319,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="35" Width="80" VerticalContentAlignment="Center" UseLayoutRounding="False" Click="ResetNumberButton_Click"/>
+        <Button x:Name="RandomizeNumberButton" Content="Randomize" Margin="225,374,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="35" Width="80" VerticalContentAlignment="Center" UseLayoutRounding="False" Click="RandomizeNumberButton_Click"/>
+        <Button x:Name="SetNumber" Content="Set" Margin="635,287,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="35" Width="80" VerticalContentAlignment="Center" UseLayoutRounding="False" Click="ModifyNumber"/>
+        <Button x:Name="AddNumberButton" Content="Add" Margin="588,332,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="35" Width="80" VerticalContentAlignment="Center" UseLayoutRounding="False" Click="ModifyNumber"/>
+        <Button x:Name="SubtractNumberButton" Content="Subtract" Margin="588,377,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="35" Width="80" VerticalContentAlignment="Center" UseLayoutRounding="False" Click="ModifyNumber"/>
+        <TextBox x:Name="CustomNumberInput" HorizontalAlignment="Left" Margin="355,329,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="195" Height="50" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontSize="25" FontFamily="D2Coding" Cursor="IBeam"/>
+        <Button x:Name="MultiplyNumberButton" Content="Multiply" Margin="680,332,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="35" Width="80" VerticalContentAlignment="Center" UseLayoutRounding="False" Click="ModifyNumber"/>
+        <Button x:Name="DivideNumberButton" Content="Divide" Margin="680,377,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="35" Width="80" VerticalContentAlignment="Center" UseLayoutRounding="False" Click="ModifyNumber"/>
+        <TextBox x:Name="DebuggingTextBox" HorizontalAlignment="Left" Margin="20,244,0,0" TextWrapping="Wrap" Text="Debugging:&#xD;&#xA;" VerticalAlignment="Top" Width="340" Height="65" IsReadOnly="True"/>
+        <TextBox x:Name="RandomNumMinInput" HorizontalAlignment="Left" Margin="21,379,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Height="30" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontFamily="D2Coding" Cursor="IBeam"/>
+        <TextBox x:Name="RandomNumMaxInput" HorizontalAlignment="Left" Margin="121,379,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" Height="30" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontFamily="D2Coding" Cursor="IBeam"/>
+        <Label x:Name="RandomNumMinLabel" Content="Min" HorizontalAlignment="Left" Margin="50,344,0,0" VerticalAlignment="Top"/>
+        <Label  x:Name="RandomNumMaxLabel" Content="Max" HorizontalAlignment="Left" Margin="150,344,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="IsAnimActionRunningDebugCheckBox" Content="isAnimActionRunning" HorizontalAlignment="Left" Margin="25,219,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <TextBox x:Name="FileNameInput" HorizontalAlignment="Left" Margin="115,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Height="25" Text="RecordFile1"/>
+        <Label x:Name="FileNameLabel" Content="FileName:" HorizontalAlignment="Left" Margin="35,34,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" Height="30" Width="85" Padding="5,5,0,0"/>
+        <CheckBox x:Name="IsAutoSaveEnabled" Content="AutoSave" HorizontalAlignment="Left" Margin="50,74,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <Button x:Name="FileSaveButton" Content="Save" HorizontalAlignment="Left" Margin="135,69,0,0" VerticalAlignment="Top" Height="25" Width="70" Click="FileSaveButton_Click"/>
+        <Button x:Name="FileLoadButton" Content="Load" HorizontalAlignment="Left" Margin="215,69,0,0" VerticalAlignment="Top" Height="25" Width="70" Click="FileLoadButton_Click"/>
 
     </Grid>
 </Window>
